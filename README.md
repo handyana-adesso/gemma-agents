@@ -16,10 +16,10 @@ GemmaAgents/
 ├─ README.md
 ├─ .gitignore
 ├─ src/
-│  ├─ Agents.Shared/              Class library: model-client setup + reusable tools.
+│  ├─ GemmaAgents.Shared/              Class library: model-client setup + reusable tools.
 │  │                              NuGet packages are pinned here; the apps inherit them.
-│  ├─ LocalDevHelper/             Project 1 (easy) — a CLI agent over your project folder.
-│  └─ GroundedSupportAgent/       Project 2 (medium) — RAG + memory + evaluation.
+│  ├─ GemmaAgents.LocalDevHelper/             Project 1 (easy) — a CLI agent over your project folder.
+│  └─ GemmaAgents.GroundedSupportAgent/       Project 2 (medium) — RAG + memory + evaluation.
 └─ python/                        Project 3 (hard) — fine-tuning + serving scripts (not a .csproj).
 ```
 
@@ -61,8 +61,8 @@ dotnet build
 Run a specific project:
 
 ```bash
-dotnet run --project src/LocalDevHelper
-dotnet run --project src/GroundedSupportAgent
+dotnet run --project src/GemmaAgents.LocalDevHelper
+dotnet run --project src/GemmaAgents.GroundedSupportAgent
 ```
 
 ## Configuration
@@ -86,8 +86,8 @@ pinned to a coherent, co-versioned pair in `src/Agents.Shared/Agents.Shared.cspr
 the latest:
 
 ```bash
-dotnet add src/Agents.Shared package Microsoft.Agents.AI
-dotnet add src/Agents.Shared package Microsoft.Agents.AI.OpenAI
+dotnet add src/GemmaAgents.Shared package Microsoft.Agents.AI
+dotnet add src/GemmaAgents.Shared package Microsoft.Agents.AI.OpenAI
 ```
 
 The API shape (`GetChatClient → AsIChatClient → CreateAIAgent`) has been stable
