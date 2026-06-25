@@ -1,0 +1,88 @@
+# ─────────────────────────────────────────────────────────────
+# .NET
+# ─────────────────────────────────────────────────────────────
+bin/
+obj/
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Ww][Ii][Nn]32/
+[Aa][Rr][Mm]/
+build/
+publish/
+*.user
+*.userprefs
+*.suo
+*.cache
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Build / test results
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+*.trx
+*.coverage
+*.coveragexml
+coverage*.json
+coverage*.xml
+coverage*.info
+TestResults/
+BenchmarkDotNet.Artifacts/
+
+# NuGet
+*.nupkg
+*.snupkg
+**/packages/*
+!**/packages/build/
+*.nuget.props
+*.nuget.targets
+.nuget/
+
+# ─────────────────────────────────────────────────────────────
+# IDE / editor
+# ─────────────────────────────────────────────────────────────
+.vs/
+.vscode/
+*.swp
+.idea/        # Rider / IntelliJ
+*.sln.iml
+.DS_Store     # macOS
+Thumbs.db     # Windows
+
+# ─────────────────────────────────────────────────────────────
+# Secrets / local config — never commit API keys or endpoints
+# ─────────────────────────────────────────────────────────────
+*.env
+.env
+.env.*
+appsettings.*.local.json
+secrets.json
+
+# ─────────────────────────────────────────────────────────────
+# Project 3: Python (fine-tuning / serving)
+# ─────────────────────────────────────────────────────────────
+python/.venv/
+python/venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints/
+
+# ─────────────────────────────────────────────────────────────
+# Model weights, datasets, vector stores — large, regenerable,
+# and do not belong in git. Use Git LFS or external storage instead.
+# ─────────────────────────────────────────────────────────────
+*.gguf
+*.safetensors
+*.bin
+*.pt
+*.onnx
+models/
+checkpoints/
+adapters/
+data/
+*.faiss
+*.index
+qdrant_storage/

@@ -1,0 +1,6 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/GemmaAgents.LocalDevHelper/GemmaAgents.LocalDevHelper.csproj" />
+    <Project Path="src/GemmaAgents.Shared/GemmaAgents.Shared.csproj" />
+  </Folder>
+</Solution>
